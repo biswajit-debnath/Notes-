@@ -1,0 +1,28 @@
+
+1.1  transition-delay:t1,t2,t3,..;     //Amout of time to complete the transition
+1.2  transition-property:p1,p2,p3..; //Aplly transition only to given properties
+1.3  transition-delay:t1,t2,t3..;    //Delays a transition a particular amount of time
+1.4  transition-timimng-function:ease-in/ease-out/ease-in-out   //It sets the acceleration & deccelaration of transitionn
+1.5  transition: property duration ease-in delay,property duration ease-in delay;
+
+
+2.1  transform:			//Transform donot effect position of other element
+	     a) rotate(0-360deg)  //Rotate an element  
+	     b) skewX(deg) //streached the image
+	     c) skewY(deg) //Rotate the image on z axis
+	     d) scale(width,height)
+	     e) translateX(100px)
+
+3.1  transform-origin:0 0;  //Changes the origin of transform
+3.2  transform:rotate(1turn) scale(1.2);  //Apply both simultaneously
+	*transform propery should be used only once in a rule or it will only take the last tranform *
+	*cubic bezier function* bezie curve  cubic-bezier.com
+
+4.1  perspective:700px  //It sets the 3d perspective of the container to show elements in the container in 3d
+4.2  transform-style:preserve-3d  //It lets the the child container of a 3d container to have 3d otherwise nested container donot show its childers in 3d 
+4.3  backface-visibility:hidden //It hides the backside of a elemtn when rotated
+4.4  rotateY()   //Rotates the image in main axis 
+4.5  rotateX()  // Rotates the image in cross axis
+4.6  rotated(x=0/1,y,z,deg)  //can take all three values
+
+5.1  prespective-origin: 50% 50%;  //Set the perspective as from which side we are viewing the screen

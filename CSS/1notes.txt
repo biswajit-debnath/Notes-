@@ -1,0 +1,124 @@
+0.1   @import "style.css" imports as like link.
+0.2   * is a universal selector which selects every element in the HTML.
+0.3   --variable_name: value;       /Assignment  color: var(--variable_name, fall_back_color);
+///////////////////////////////////font/////////////////////////////////////////////////////////////////////////
+1.1   text-transform: uppercase;                //sets all text to uppercase
+1.2   font-weight: bold                        //lighter or 100-900;
+1.2   letter-sapcing: 
+1.3   line-height: 1.5                        //a unit less value is more preffered which is relative to the font size 
+1.4   font: weight size/line-height family;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+2.1  box-sizing: border-box;                           //Don't increases the height and width if padding or border is introduced
+2.2  max-width:                        //It limits the width to a maximum value after reaching that width no more width increases
+2.3  background-size: cover                          //Sets the size of the background content ex img
+2.4  background-position: center                          //Positions the img horizontally and vertically
+	background: color url() repeat position / size;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+3.1   ol,ul {
+	list-style-type: none;          //Bullets of the list various types of bullets exists
+	list-style: inside              //Bullets are by default placed outside the li container
+     }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+0.  position: relative  //Using left ,top etc the position of element can be change w.r.t its current position without affecting other elemnt on the document 
+1.  position: absolute //It positions the item in relative to parent 
+		item i.e if the parent position:relative is relative or
+		 it position relative to browser viewport
+	top:
+	left:
+	right:
+	bottom:
+
+2.  position: fixed  //It always positions the item w.r.t to view port
+			window 'Which is usefull if we want to stick 
+			the navigation header to top of the page always' 
+//////////////////////////////////////////////Shadow/////////////////////////////////////////////////////////////
+4.1   text-shadow: horizontal-offset  vertical-offset  blur-radius  color;
+4.2   box-shadow: horizontal-offset  vertical-offset  blur-radius  color;
+4.3   box-shadow: horizontal-offset  vertical-offset  blur-radius spread color;   //spread spreads the shadow in all the directions
+4.4   box-shadow: inset horizontal-offset  vertical-offset  blur-radius  color;  //inset sets the shadow inside the container
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+5.1   background-image: linear-gradient(to top/angle, orange, red/transparent) //It will produce a gradient effect which start 
+										  bottom orange and ends at top red
+		        radial-gradient(circle at top,orange, red)             //By default it is in ellipse
+		        linear-gradient(to top/angle, orange, red, blue)       //# color stops
+		        linear-gradient(to top/angle, orange 0%, red 40%,blue 100%) // color stop at particular position in comma 
+                                                                                       seperated gradient first value will be the 
+											top layer
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+6.2  @font-face {
+    	font-family: 'NameofFont'
+	src=''
+    }              //Embeded fonts
+6.3  Pseudo class
+	  " selector:pseudo class {}"
+	a)  a:link {}   		//All unvisited links that conatins a href value
+	b)  a:active{} 		       //Links that are in pressed state 
+	c)  :focus  		      //tab button in keyboard
+	////////////////////////////////////////////////////////////////////////
+	d) li:first-child OR last-child{}  //Target the li which is first OR last child of its parent
+	e) :only-child {} 		//Target all elements which is only child of a parent element i.e it doesn't have any 
+				          sibling but has a parent 
+	f) :empty {}  			//Targeta all which doestn't have any content or child
+	
+	g) :disabled{} 			//Targets all element which has the property disabled
+	h) form[type="checkbox"]:checked{} 	//Selects all ckeckbox form which is in checked state currently. 
+
+	i) li:nth-child(2n+3) 			//Targets all li which are 2nd child child starting from 3
+		:nth-child(-n+3) 		// Selects li from 3 to 1 backwards
+	j) li:nth-of-type(){}  			//It is similiar to previous but it only counts/targets li/element
+	i) li:nth-last-of-type(){}  //Similar to previous but it counts from last 
+	/////////////////////////////////////////////////////////////////////////
+	k) :root 			//Top most element of an document
+	l) #id:target  			//It selects the id when the links href's id is that id and clicked  
+	m) div:not(#id) 		//It select all div's except that div with that id value
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+7.1  Pseudo element
+	a)  .para::first-line {}  	//Selects the first line of .para
+	b)  .para::first-letter {} 	//Selects the first letter of .para
+
+	c) .cls::before OR after { content: "Hi" OR centent: url(img.png)}    //Adds Hi text before/after the elemnt with class .cls 
+	  		content: attr(href); 					//It shows the attribute value before/after 
+			*before and after sudo elements are appended or prepended as a child to the selected element*
+	d) ::placeholder{}  //Selects the placeholder text in input 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+8.1  cursor:pointer;  		//Changes the mouse cursor to pointer when hovered
+
+8.2   Attribute Selector
+	a>  [class]   			//Target all tags which has a attribute class in it
+	b>  [class="clsName"]  		//Target all attribute which has classname equal to clsName
+	c>  Element[class="className"] 	//Specific to that Element
+	d> DRY
+	e> element[attribule^="beginging string"] 	//^ used for begins with
+	f> element[attribule$="ending string"] 		//$ used for ends with
+	g> element[attribule*="contains string"] 	//* used for contains
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+9.1    Combinators
+	a>  '>'  //Direct child  form > a{ It selects all a tags which are child of form *not child of child*}   
+	b>  '+'  //Immediate sibling   form + a{It selects th a tag which is first sibling of form}
+	c>  '~'  //All siblings of a element  form ~ a{It selects all a tag which are siblings of form}
+ 
+////////////////////////////////////////////////Flexbox///////////////////////////////////////////////////////////////////
+5    Flexbox
+	1)  display: inline-flex;  //Makes the flex conttainer inline
+	
+     Flex-container properties
+	a)  flex-direction: column/row/row-reverse
+	b)  flex-wrap: warp   	//Allow the flex container to not overflow break into new line
+	c)  justify-content:felx-start/center/space-between,around //Controls the horizontal poisition and alignment of felx items on main axix
+					space-between equally sapcess the items except the first and last element on the other case space-around is used
+					
+	d)  align-items:streached/flex-start/center  //Align  all the flex items vertically in cross axis
+
+
+
+     Flex-items properties
+	*Margin sets to auto absorbs all the free space availabe in the container *
+
+	a)  order: 2/-1  //A less value moves the element towards left higher value towards right
+	b)  flex-grow: 1/2  //Equally spans the entire space of the conatiner by maintining the flex-grow value of each item
+	c)  flex-basis: 200px  //The flex item will display in equal size at width 200px or wider if less than 200 felx item will redistribute.
+			*0 flex-basis value items will never re distribute to next line*
+ 
+	d)  align-self:streached/flex-start/center //Align the particlular element vertically also over writes the container vertical alignment
+	

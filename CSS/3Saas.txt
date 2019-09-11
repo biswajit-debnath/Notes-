@@ -1,0 +1,98 @@
+1.  Saas has two extension/implementation
+	1.  .sass(it uses indentation method)                
+	2.  .scss (It is almost like css)
+
+2  Compiling scss to css comand
+			"scss   file.scss   output_filename.css"
+			"Scss   input_folder":output_folder"
+
+3   Enabling watcher to automatically convert scss to css comand
+			"scss  --watch   input_file.scss:output_file.css"
+
+4   $variable_name: #efefef / font-family / ..
+
+5   For decendent selector or combinator
+	In css we use like-   ul li {}
+	In scss               ul{
+				   li{}/ > li
+				} 
+6   For sudo class/ element
+			    a{
+				&:hover{}
+				.into & {}
+			     }
+
+
+7.  @mixin name {  color:red;       //  	@include name{height:50%;};
+	      	   width:100;
+		   @content;
+		      &:hover{color:blue;}
+		}
+
+8  @extend selector;      // Entends all property of that selector into this
+
+9  placeholder selector '%' are gerarl rule which is used by all other selector
+	%name { color:blue;}
+
+
+
+8.  Partials used to seperate scss files into more than one file
+	To create a partial-->      _partial_name.scss
+	To import into main scss--> import 'partialfolder/partial_name','partialfolder/mixin';
+				*Order of import does matters*
+
+
+
+9.  .class {
+		color:red;
+		@media (min-width:768){
+		   color:blue
+		}
+	   }
+
+10   Color function
+		a) ligthen(color/variable, 10%)
+		b) darken(color/variable, 10%)
+		c) complement(color/variable)	
+			$Varible: ligthen(color/main_color_variable, 10%)
+		**A color and its complement next to each other creates strong visual contrast **
+
+11   @function($a,$b){			//functions are used to get a result for a calculation
+	return ($a / $b) * 100;
+     }
+
+
+
+12  Mixin with parameter
+	@mixin m($var1,$var2,$c) {}  		@include m($a,$b,160px);
+
+13  @include m($var2:$b, $var1:$a, 160px) //Passing argument can be in any order if actual variable name is written before the value
+
+14  $var:null //Setting a parameter in mixin declaration will remove that that property that uses this value from main css file
+
+15  @if (condition) {} 
+
+16  $map_name:(				map-get(map_name, 'key');
+	'key':value,
+	'key2':value2
+	);
+
+17  @for $i from 1 to 10 {
+	.box-#{$i}{
+	   background: adjust-hue(tomato, $i * 20);
+	}
+}
+
+18  $teacher: ('Adrew', 'Guil', 'Dan');
+    @each $var in $teacher {
+	.teacher-#($var){background-image: url('img/#{$var}.jpg')}
+    }
+19  $teacher: ('Adrew':1, 'Guil':2, 'Dan':3);
+    @each $var, $number in $teacher {
+	.teacher-#($var)-#($number){background-image: url('img/#{$var}.jpg')}
+    }
+
+20  if $value == null
+	@error "#{$value} is not a correct value"
+
+21    

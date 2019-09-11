@@ -1,0 +1,11 @@
+1.  Function Expression
+	let var_name = function() { //Content inside function}
+
+2.  Arrow Function
+	let var_name = (arguments) => {//Content inside function }
+
+3.  Concise arrow function
+     If function contains only 1 argument no parenthesis required
+	let var_name = arg => { }
+     If function contains only one line of code then curly braces and return statement is not required
+	let var_name = arg => arg*2;

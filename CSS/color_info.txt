@@ -1,0 +1,26 @@
+* Opposite colors on the color wheel can make each other appear more vibrant when placed side-by-side.
+* Primary color are RGB
+* When 2 primary color are mixed a complement/secondary color is created which is not complement to any of the color which are 	
+	combined to create it buto pposite to that primary color on the color wheel. For example, magenta is made with red and blue, and is the 
+	complement to green.
+* Tertiary colors are the result of combining a primary color with one of its secondary color neighbors. For example, red (primary)
+	 and yellow (secondary) make orange. This adds six more colors to a simple color wheel for a total of twelve.
+
+  There are various methods of selecting different colors that result in a harmonious combination in design. One example that can 
+	use tertiary colors is called the split-complementary color scheme. This scheme starts with a base color, then pairs it with
+	the two colors that are adjacent to its complement. The three colors provide strong visual contrast in a design, but are
+	more subtle than using two complementary colors.
+--> http://www.gardening.cornell.edu/homegardening/scene638f.html
+
+* hsl(dgree on color wheel,saturation percentage/amout of gray 100% for the actual color,lightness percentage/amout of white 50%
+	 for actual color)
+* The hsl() option in CSS also makes it easy to adjust the tone of a color. Mixing white with a pure hue creates a tint of that 
+	color, and adding black will make a shade. Alternatively, a tone is produced by adding gray or by both tinting and 
+	shading. Recall that the 's' and 'l' of hsl() stand for saturation and lightness, respectively. The saturation percent 
+	changes the amount of gray and the lightness percent determines how much white or black is in the color. This is useful 
+	when you have a base hue you like, but need different variations of it.
+
+* https://tubikstudio.com/color-theory-brief-guide-for-designers/   //color theory info
+* Darker color variations are made by lowering brightness and increasing saturation. Brighter color variations are made by 
+	increasing brightness and lowering saturation.-
+* https://medium.com/@erikdkennedy/color-in-ui-design-a-practical-framework-e18cacd97f9e //color info for UI

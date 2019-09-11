@@ -1,0 +1,21 @@
+1.  localStroge.setItem('key', 'value');
+	setItem('color', 'green');      //Local storage stores value in key value pairs
+
+
+2.  sessionStorage.setItem('key', 'value');	//session storage deletes all stored value after browser exists but local storage doesn't
+
+3.  localStorage.getItem('key');  To get the value for the key on a praticular website
+
+4.  localStorage.removeItem('color');
+
+5.  Local storage can accessed like any other js object
+	localStorage.color = "red";
+	delete localstorage.color;
+6. try{ 
+   'localStorage' in window && window['localStorage'] !== null  //To check if localStorage is there in the browser or not
+    }
+    catch(e){
+     return  false;
+    }
+7.
+  

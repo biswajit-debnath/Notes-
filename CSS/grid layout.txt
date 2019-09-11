@@ -1,0 +1,27 @@
+** fr unit takes the entire space available after excluding gutters and other values
+** repeat(no_of_times, what to repeat);
+** minmax(min_value, max_value);   //sets the min and max value of the element
+
+** auto-fill/auto-fit property of repeat that calculates the no. of column that will fit in the container width and wraps to the next row 
+	repeat(auto-fill, minmax(200px,1fr));
+	auto-fill doestnt spans to the available space auto-fit does
+
+* Grid Container
+	1. grid-template-column/row: 200px 200px 200px;  //sets each column/row width 
+	2. grid-column/row-gap:     //set the gutter between adjancent row/column
+ 	3. grid-auto-row:	//sets the implicits row height 
+	4. grid-auto-flow:row/column  //sets the flow of extra element
+
+	5. grid-template-areas: "header header"    //each grid-name takes up 1 grid area
+				"main aside"
+				"footer footer";	//. inplace of grid name makes the grid area black
+
+
+
+
+* Grid Items
+	1. grid-column-start:1       
+	2. grid-column-end:3		//spans the specific item from line no 1 to 3
+	3. grid-row-start/end: -1   //negative value starts from last line
+		grid-column/row: start / end;
+	4. grid-area: any-name      

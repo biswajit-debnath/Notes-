@@ -1,0 +1,59 @@
+1   $('.clsName').hide()/.show;   //Hide/show the element with class clsName
+2   $('.clsName').click(function() {});  //click event with callbackfunction
+3   $('.clsName').fadeIn/fadeout(mill_sec);  //Fade in/out the element in given amount of millisec
+4.  $('.clsName').delay(mill_sec);       //delay between two jquery statements
+5.  $('.clsName').slideup/slideDown();   //Slide up/down in vision the element
+
+6.  $('.clsName').html()  //With no arguments it is a getter method used in console
+7.  $('.clsName').html('<p>This is a paragraph</p>')
+8.  const title="My title element";
+9.  $(.clsNAme).text(title)   //Sets the data in the element with class clsName
+10. $('#input_id').val()   //Return the value/text that is typed by the user in the form
+
+
+
+11.  Unobtrusive Javascript 
+	a) Seperation of concern  //Seperating html,css,js in seperate files
+	b) Cross browser consistency  //jquery deals with that
+	c) Progressive Enhancement    //If js is present than also core content and funtionality should be available
+12.  const $var_Name    //Declaring a jquery variable
+13.  $('<element>Text</element>');   //Creating an HTML element dynamically
+14.  $('#id_name').append($variable containing the new element)    //Append the new element as its last child to element with id id_Name
+15.  $('#id_name').prepend($variable containing the new element)
+
+
+16.  When dealing with multiple events "on" method is used
+	$('.clsName').on('click mouseover',function() {});
+17.  Event delegation i.e event of an elemnt propogates to ots parent
+	$('.parent').on('click', 'child_onWhich_weARe_listening', function(event_object) {
+		event_object.target/this     //returns the elemetn which was clicked
+	});
+
+18.  $('li').eq(1)   //Select the li element with idex value=1 i.e second li tag
+19.  $('li').eq(-1)  //Select the second li element counting from the last element
+20.  $('li').eq(1).prev()/next();  //Select the previous/next element of li element whose index value is 1
+ 
+
+21.  $('a:odd')   //Selects all odd a elements
+22.  $('a[href^="https//"]')
+23.  $('clsName').attr('attrName' attrValue);
+
+24.  $('clsName').css('CSS_Property', 'value');
+25.  $('#id_Name').addClass('ClassName');
+26.  event_object.preventDefault();  //prevent the brower to follow a link after clicking that button or prevent submitting the form after click
+
+
+27.  $(element).each(function(index,element){});   //Loops througn entire elements
+	conts var =$(element/this).attr('href');
+	$(link).append(`(${var})`);  
+
+
+
+
+
+
+
+
+Plugins
+
+1.    

@@ -1,0 +1,9 @@
+		Scalable Vector Graphics
+1.  SVG canbe imported with img tag as like images
+2.  Svg can be directly embeded in html
+3.  fill of an svg element can be targeted in css using fill property
+4.  More css property to handle svg
+	stroke-opacity:
+	stroke:
+	stroke-width:
+5. SVG optimization

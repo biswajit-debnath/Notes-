@@ -1,0 +1,59 @@
+1.   alert("Text to show")  //Alert message pop up
+2.   let var= prompt("Enter the value");   //Prompt the user
+	prompt returns string alwys to convert it
+	a) parseInt(text, 10)  //text thw variable and 10 is the base
+	b) parseFloat(text, 10)
+3.   document.write("<h1>Text</h1>");   //Replaces the entire content of the html page
+4.   location.href  //returns the url in the console
+5.   window global object that contains the  document object
+
+6.   document.querySelector('.cls').style.backgroundColor = 'red';
+7.   document.querySelectorAll('li')
+8.   document.getElementsByClassNAme('clsNAme');
+9.   input.value();   //returns the value placed in the input 
+
+
+10.   element.TextContent  //Returns the text in the element
+	element.TextContent = "Text content to be set";
+11.   element.innerHtml = "Html to be set"
+
+
+12.   Getting and setting an attribute of an element
+	element.attributeName
+	input.type = "text";
+	input.className
+
+13.  element.style.property-in-cabab-case = "value";
+14.  document.createElement('TagName');
+15.  parentElement.appendChild(createdElementVariable);
+16.  parentElement.insertbefore(newelement, referencedelement)
+16.  parentElement.removeChild(childElementVariable);
+
+
+17.  Passing a function as a parameter
+	Lets take fn1() and fn2() be two functions already declared
+	Passing fn1() as a argument of fn2()
+	fn2(fn1, parameter of fn1){
+	  fn1(parameter of fn1);
+	} 
+18.  setTimeout(callback_function,amount of milisecond);   //delays the callback function by the given amount of milisecond
+19.  target.addEventListener(type of event,(event_object)=>{call back function});
+	event_object.target  //Returns the element tht has been clicked
+	event_object.target.tagName == 'LI' //Returns the tag name of clicked element in all caps
+
+20.  element.parentNode   //Returns the parent element of the selecte element
+21.  element.previousElementSibling   //Returns the previous sibling of the selected elements=
+22.  element.nextElementSibling
+23.  element.children    //Returns all the children of the element
+
+
+
+24. eventListener type submits submits the form when user click the button/input with type submit or pressed enter in the form.
+ 	change is a type used in checkbox to check the state
+26. event_obj.preventDefault();
+
+27. ` `  //are used when using multiline string
+26. "My name is ${name_var}"   //interpolating
+
+
+27.   window.onload = function(){}   //On loading the page

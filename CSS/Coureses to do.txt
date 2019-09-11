@@ -1,0 +1,6 @@
+https://teamtreehouse.com/library/web-typography   "Web typography"
+
+http://markdotto.com/playground/3d-text/        "3d effect text-shadow"
+
+
+https://coding-artist.teachable.com/courses/enrolled/155435   //css image course

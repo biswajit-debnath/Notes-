@@ -1,0 +1,29 @@
+**No nested form is allowed**
+<s>       //Strike through
+<form></form>-- used to create a form with attributes "action=url to where data is to be send"
+		and "method=HTTP method" i.e POST
+
+<input type=what type of input ex-text,password..  name=used to differentiate in server side code>
+		placeholder="Text to show in the input form"  
+		required a binary value to signify that this field is requied cannot be blank 
+		
+		<input placeholder="It shows up in the input section as a example">
+			onkeyup="myFunction()"  //when typing in the input
+<textarea id=..   name=..></textarea>
+
+<button type=what to do ex-submit ex-submit,button for js,reset>Text in the button</button>
+
+<label for="id for that input">  //label for a input section
+
+<fieldset> //logical divisions of inputs in a form
+<legend> //Label for logical division like <label> tag used
+
+<select>   //Select a option of items from list of items
+	<option value="Actual value is recieves">Text shown in list</option>
+	<option value="" selected disabled>Choose</option>   //Used as a placeholder in select
+<optgroup label=>   //Groups options in sections based on labels
+
+For radio buttons  <input type="radio" value="" name=""><label></label> "Among 2 box if selecting one removes all other is achived by 
+			kepping all radio input's name same"
+For chechbox it is like radio but name same can also select more than one box
+ 

@@ -1,0 +1,53 @@
+1.   Svg animation camn only be done if it is embed in html
+2.   Svg can be animated using js
+     Some frameworks are
+	snap.svg
+	velocity.js
+	GSAP (GreenSock Animation Platform)
+3.  <g></g> It is container for grouping svg elements like path circle
+4.  transform-origin:50% 50% doesn't works in firefox so pixel ualue is used 
+	pixel value can be obtained from cx(centered x) and cy from svg file
+
+
+
+5.  @keyframes name {     //Defines the animation what to do at 0% time 30%time ect
+	0%{ }
+	30%{}
+	....
+    } 
+   //Css rule to apply this animation
+	animation: keyframe_name  duration  delay  timining_fn  animation_fill_mode=backwards//scaling begans at 0%;
+	animation-delay: 
+	
+
+6.   stroke-dasharray: 5;  //Create a dashed stroke with 5px length stroke and 5px blank space
+7.   stroke-daskoffset: 5; //Moves all dashes and blank spaces by 5px
+
+*https://codepen.io/himmel/full/xbNJaZ/*//To understand dasharray/offest
+
+8.    //To animate the stroke
+	a. Determine the length of the total stroke
+	b. Make the stroke dasharray to total length of stroke
+	c. Offset completely so that the entire stroke goes out of vision range and vision range is covered by space of dasharray
+	d. Animate the offset to 0 so that sapce moves out of vision slowely and stokes comes in vision range
+	
+	/****************************************/
+	To get the length of entire stroke in px from js
+	var path = document.querySelector('.path');
+	var length = path.getTotalLength();
+ 
+
+
+9.   <defs></def>  //groups element so it can be repeated using use tag
+   *To use contect in def tag
+	<use xlink:href="#id_of_g_tag"  fill="color"  transform="scale(1.4)"/>
+	
+
+
+10.    <symbol id="Id_name" viewBox=""></symbol>
+	<svg width="150" height="150">
+	<use xlink:href="#id_of_g_tag fill="color" class="clsName">
+	</svg>                                        //In symbol tag we can use width and height of particular svg relative to its viewBox
+  **We have to add style="display:none" in main svg file to hide the svg container **
+
+11.   currentColor property stores the color value of the element or its parent
