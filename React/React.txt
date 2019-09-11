@@ -1,0 +1,74 @@
+1.  Adding react using CDM
+	<script crossorigin src="react.dev.js"></script>
+	<script crossorigin src="react-dom.dev.js"></script>
+
+2.  Creating element using react
+	const title = React.createElememt (
+	  'h1',
+	   {id: 'main-title', title: 'This is a title'}/null,	
+	   'My Fierst React Element'
+	); 
+	//creates a js object not a dom node
+ 
+ //To convert this object to DOM node
+	React.render (
+	  title,
+	  document.querySelector('.clsName')
+	);
+3.  Using JSX to create element
+	//we need babel compiler to use this 
+	<script src="pointng to babel"></script>
+	<script type="text/babel" src="Main js file we are working on">
+	const title = <h1>My First React Element</h1>
+	const desc = <p>This is a paragraph</p>
+ //Same rendering is required
+
+4.  Using JSX expression
+	const title = 'My First React Element';
+	const mytitle = 'Title';
+	cons header = (
+	  <h1 id={myTitle} className={clsName}>{ title }</h1>
+	);
+5.  Comment  {*This is a comment in react*}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+6.React componenets
+  //Using function
+	fuction Header() {   //Function first word should be capital
+	  return ( 
+	    <header>ScoreBoard</h1>
+	    <span className="stats">Players</span>
+	    </header>
+	  );
+	}
+ //To render the component
+	ReactDOM.render(
+	  <Header />,    //component name 
+	  document.getElementById('idName')
+	);
+
+*Download react dev tools*
+
+
+
+7. Parameters passed to components
+	const Header = (props) =>{
+	  Return (
+	   <header>{prop_obj.title}</header>
+	   <span>Players:{prop_obj.players}</span>
+	  );
+	}
+	
+	ReactDOM.render(
+	  <Header title="Score" players={6/variable} />,  //Double quotes while using props
+	  document.getElementById('idName')
+	);
+
+
+8.  {props.variable.map(player => 
+	<Player name={ player.name }
+		score={ player.score } />
+
+** value.toString()  used to convert a number value to string**
