@@ -1,0 +1,8 @@
+1. Material Icon Theme   //For generating icons in specific to file type like html,css,js icons
+2. Auto Rename Tag   
+3. live server   //live upadates the html css to the browser automatically
+4. Auto Rename Tag
+5. Bracket Pair Colorizer
+6. Prettier - Code formatter
+7.
+

@@ -31,6 +31,11 @@
 2.  position: fixed  //It always positions the item w.r.t to view port
 			window 'Which is usefull if we want to stick 
 			the navigation header to top of the page always' 
+
+**********************
+   column-count: 2;	//Sets the no of column *Try using section tag*
+   column-gap:3rem;
+***********************
 //////////////////////////////////////////////Shadow/////////////////////////////////////////////////////////////
 4.1   text-shadow: horizontal-offset  vertical-offset  blur-radius  color;
 4.2   box-shadow: horizontal-offset  vertical-offset  blur-radius  color;
