@@ -1,3 +1,4 @@
+
 0.1   @import "style.css" imports as like link.
 0.2   * is a universal selector which selects every element in the HTML.
 0.3   --variable_name: value;       /Assignment  color: var(--variable_name, fall_back_color);
