@@ -15,10 +15,15 @@
 	  title,                  //React element
 	  document.querySelector('.clsName')     //container element or parent element
 	);
+
+
+
 3.  Using JSX to create element
-	//we need babel compiler to use this 
+**********//we need babel compiler to use this since it transpile the jsx code to simple react code*************************  
 	<script src="pointng to babel"></script>
 	<script type="text/babel" src="Main js file we are working on">
+
+           /*To create an element using JSX*
 	const title = <h1>My First React Element</h1>
 	const desc = <p>This is a paragraph</p>
  //Same rendering is required
@@ -56,8 +61,8 @@
 7. Parameters passed to components
 	const Header = (props) =>{
 	  Return (
-	   <header>{prop_obj.title}</header>
-	   <span>Players:{prop_obj.players}</span>
+	   <header>{props.title}</header>    //{ expression or something that returns value}
+	   <span>Players:{props.players}</span>
 	  );
 	}
 	
@@ -72,3 +77,69 @@
 		score={ player.score } />
 
 ** value.toString()  used to convert a number value to string**
+
+
+9.   React component using Class
+	class Component_Name extends React.Components {
+	  render(){
+	    return (
+	      <span className="Something">{ this.props.score }</span> 
+    	    );
+	  }
+	}
+
+10.   To make the react componenty class to state full
+	class Component_Name extends React.Components {
+	constructor(){
+	   super();
+	   this.state = {
+	   	score: 0      //propery that needs to be state full
+	    };
+	}
+	  render(){
+	    return (
+	      <span className="Something">{ this.props.score }</span> 
+    	    );
+	  }
+	}
+
+
+	------------OR short------------------------------     
+	class Component_Name extends React.Components {
+	 state = {
+	   	score: 0      //propery that needs to be state full
+	    };
+	  render(){
+	    return (
+	      <span className="Something">{ this.props.score }</span> 
+    	    );
+	  }
+	}  
+
+
+11.   User defined method in react component class
+	class Component_Name extends React.Components {
+	   myFunction(){
+	   console.log('Mt Method');
+	  }
+	
+	render() {
+		return(){
+		   <button className="cls_name" onClick={ this.myFunction }> Submit</button>      //this.myFunction parenthesis is not used since we are making a reference to the function not calling it when the span is displayed
+		}
+	}
+
+
+12.   To change the state 
+
+	class Component_Name extends React.Components {
+	   myFunction(){
+	   console.log('Mt Method');
+	  }
+	
+	render() {
+		return(){
+		   <button className="cls_name" onClick={ this.myFunction }> Submit</button>      //this.myFunction parenthesis is not used since we are making a reference to the function not calling it when the span is displayed
+		}
+	}
+
