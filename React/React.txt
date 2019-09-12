@@ -1,19 +1,19 @@
 1.  Adding react using CDM
 	<script crossorigin src="react.dev.js"></script>
-	<script crossorigin src="react-dom.dev.js"></script>
+	<script crossorigin src="react-dom.dev.js"></script>  //react dom was first introduced 
 
 2.  Creating element using react
 	const title = React.createElememt (
-	  'h1',
-	   {id: 'main-title', title: 'This is a title'}/null,	
-	   'My Fierst React Element'
+	  'h1',    		 //Type of element we want to create
+	   {id: 'main-title', title: 'This is a title'}/null,	//object containing attributes and values to the element OR null
+	   'My Fierst React Element'                         //Content or children of the element which can be other react element
 	); 
 	//creates a js object not a dom node
  
  //To convert this object to DOM node
 	React.render (
-	  title,
-	  document.querySelector('.clsName')
+	  title,                  //React element
+	  document.querySelector('.clsName')     //container element or parent element
 	);
 3.  Using JSX to create element
 	//we need babel compiler to use this 
