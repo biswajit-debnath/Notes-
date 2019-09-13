@@ -133,13 +133,46 @@
 12.   To change the state 
 
 	class Component_Name extends React.Components {
-	   myFunction(){
-	   console.log('Mt Method');
+	    state = {
+	   	score: 0      //propery that needs to be state full
+	    };
+
+	   myFunction = () =>{     //arrow fn is used to bind the fn to current object instance
+	   	this.setState({
+			score=this.state.score +1
+		)};
 	  }
-	
-	render() {
+	-------------------------------------------------OR-----------------------------------------------------------------------------
+	   myFunction = () =>{     
+	   	this.setState(prevState => {                 //consistant if we use thw vlaue of previous state
+			return{
+				score: prevState.score +1
+			};
+		)};
+	  }
+
+
+	  render() {
 		return(){
 		   <button className="cls_name" onClick={ this.myFunction }> Submit</button>      //this.myFunction parenthesis is not used since we are making a reference to the function not calling it when the span is displayed
 		}
+	  }
 	}
+--------------------------------------/*To remove an element
+	   myRemoveFn= (id_of_the_element) => {
+		this.setState( prevState =>{
+			return{
+			    players: prevState.players.filter( p => p.id !== id)            //It will create a new players array from the previous players array by filtering out the player whose id is give the function
+ 
+			}
+		});
+	   }
+	
+
+
+
+
+
+
+
 
