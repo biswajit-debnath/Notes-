@@ -1,0 +1,19 @@
+------------Creating a new react app
+
+*  npx create-react-app name                 //npx will download create-react-app if it is not available locally and also makes sure that packages are latest version
+*  npm install             //to install all project related independencies
+
+
+
+----------------------Modularizing the react components
+
+*  import  Component from './Module_name';       //  ./ is used if the file is the same folder i.e it is relative path
+*  import  React from  'react';
+*  import ReactDOM from  'react-dom';
+
+*  export default Cpmponent;              //Exporting the particular component from the module
+
+*  import React, { Compnent } from  'react'; 
+	//This import will allows us to use class like this
+	class Name extends Component { }
+
