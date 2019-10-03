@@ -40,6 +40,7 @@
 19.  target.addEventListener(type of event,(event_object)=>{call back function});
 	event_object.target  //Returns the element tht has been clicked
 	event_object.target.tagName == 'LI' //Returns the tag name of clicked element in all caps
+	event.target.removes    //Removes the element 
 
 20.  element.parentNode   //Returns the parent element of the selecte element
 21.  element.previousElementSibling   //Returns the previous sibling of the selected elements=
@@ -58,8 +59,40 @@
 //Allows a string to work as a variable name 
 
 eval(String_to_become_variableName)
+
+//When focus event moves away or close it triggers blur event
 **************************************  
 26. "My name is ${name_var}"   //interpolating
 
 
 27.   window.onload = function(){}   //On loading the page
+
+28. //getter method in js class
+	get getter_name( ){ }   //It can be accesed as like normal fn but it doestnot bind when the class is created
+
+29.  //setter method
+	set property( ) {
+		this._property='value';    //Cannot use the same name for the property as to setter name
+	}
+
+-------------------------------Array Iteration----------------------------------------------
+1.  For Each
+	arr.forEach( (arr_element,index) => {   
+	   arr_element.toUpperCase();
+	});
+
+2.  Filter         //Removing elment from array by creating a new array
+	arr.filter( element.id => { 
+	   id== condition
+ 	        //If true element will be added to new array else discurded 	
+	});
+
+3.   Map
+	let numbr_from_string = arr.map(element => {
+	    parseInt(element, 10);
+	});	
+
+4.   Reduce
+	let total = arr.reduce((acc,cur) => {
+	   acc+cur   //accumulator+ current elemnt
+ });

@@ -1,0 +1,2 @@
+1.    setTimout( callback, delay);        //Calls the callback function after the delay amount of time
+2.   setInterval(callback, delay);        //Reapetedly calls the callback fn over the dely interval of time

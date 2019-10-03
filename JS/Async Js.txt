@@ -1,0 +1,14 @@
+Promises--
+const promise_obj = new Promise( (resolve , reject) => {
+	setTimeout(() => {
+		resolve("Ready");
+		reject("Cannot make")
+	},300);
+});
+promise_obj.then( val => console.log(val) ).catch( err => console.log(err) )
+.finally( () => event.target.remove() );   It runs al the last after resolving all the promises
+//then calls the resolve and catch calls the reject
+// Data send to resolve i.e resolve(data) is received in then i.e then(data => //It is that data that is send in the resolve parameter)
+
+
+2.   Promise.all( n_promises)    //Resolves n number of promises into 1 array of promise 

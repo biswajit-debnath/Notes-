@@ -12,6 +12,7 @@
 <textarea id=..   name=..></textarea>
 
 <button type=what to do ex-submit ex-submit,button for js,reset>Text in the button</button>
+		onclick="myFunction()" 
 
 <label for="id for that input">  //label for a input section
 

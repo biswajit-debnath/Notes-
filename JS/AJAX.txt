@@ -1,0 +1,23 @@
+1. Create an XMLHTTP request object
+2. Create a callback fn
+3. OPen a request
+4. Send the request
+
+1.    var xhr = new XMLHttpRequest();
+2.    xhr.onreadystatechange = function () {	//onreadystatechange is an event that triggers on state change in xhr object like sending the req receiving the data from server
+	if(xhr.readyState === 4  && xhr.status === 200 OR xhr.status < 400){		//readtState vlue 4 signifies that data has been received from the server
+	    element.innerHTML = xhr.responseText;    //responseText containers the data that has been received from the server
+	}
+       xhr.onerror= () =>{  reject('Network error or something else ')};
+};
+
+ OR   2.   xhr.onload = function(){   console.log( xhr.response ) };
+3.    xhr.open('GET' , 'requestingcontent.html');
+4.   xhr.send( //JSON.stringify(js_obj//If method is post)); else only send()
+
+* xhr.statusText     //Returns the err text that defines the err that occured
+
+// If we requesting a json file
+	var employee = JSON.parse(xhr.responseText); 
+*If we sending data that is post request then we have to specify the type of data we are sending by setting the header
+   xhr.setRequestHeader('Content-Type' ,  'application/json');  //for json
