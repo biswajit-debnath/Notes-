@@ -13,6 +13,12 @@
 9.   input.value;   //returns the value placed in the input 
 
 
+//////////////////////////////////////
+After Loading the DOM calls the callback function
+addEventListener('DOMContentLoaded', callback_function);
+
+
+
 10.   element.textContent  //Returns the text in the element
 	element.textContent = "Text content to be set";
 11.   element.innerHtml = "Html to be set"

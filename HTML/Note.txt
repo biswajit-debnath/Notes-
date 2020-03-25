@@ -1,11 +1,13 @@
 **No nested form is allowed**
 <s>       //Strike through
+
 <form></form>-- used to create a form with attributes "action=url to where data is to be send"
 		and "method=HTTP method" i.e POST
 
 <input type=what type of input ex-text,password..  name=used to differentiate in server side code>
 		placeholder="Text to show in the input form"  
 		required a binary value to signify that this field is requied cannot be blank 
+		autocomplete="on"  drop down menu from which we can select from previously used
 		
 		<input placeholder="It shows up in the input section as a example">
 			onkeyup="myFunction()"  //when typing in the input
