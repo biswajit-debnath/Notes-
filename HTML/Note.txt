@@ -23,7 +23,7 @@
 
 <select>   //Select a option of items from list of items
 	<option value="Actual value is recieves">Text shown in list</option>
-	<option value="" selected disabled>Choose</option>   //Used as a placeholder in select
+	<option value=" selected disabled">Choose</option>   //Used as a placeholder in select
 <optgroup label=>   //Groups options in sections based on labels
 
 For radio buttons  <input type="radio" value="" name=""><label></label> "Among 2 box if selecting one removes all other is achived by 

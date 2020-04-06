@@ -1,0 +1,55 @@
+Flask dev server can be run using -> flask run   command
+* Before that we have to configure the flask file by -> export FLASK_APP=flask_file.py
+* To set port and host we can by this run   -> flask run --host=0.0.0.0 --port=3000
+
+
+
+Flask app/python app can be run using apache server
+	* Install apache server -> sudo apt update -> sudo apt-get apache2
+	* Install python -> sudo add-apt-repository ppa:jonathonf/python-3.6 -> update -> install python-3.6 
+	* Install pip3 -> sudo apt install python3-pip
+	* Install flask -> sudo pip3 install flask
+	
+
+      WSGI install for running falsk on apache
+	* sudo apt-get install libapache2-mod-wsgi-py3
+	
+      Link the FlaskApp folder to it from the site-root defined in apache’s configuration
+	  * sudo ln -sT ~/flaskapp /var/www/html/flaskapp
+
+      Create a .wsgi file to load the app in the FlaskApp folder
+	.wsgi name must be the main flask file name i.e if ->flaskapp.py then flaskapp.wsgi
+		Place this code in the .wsgi file
+		* #flaskapp.wsgi
+		       import sys
+		      sys.path.insert(0, '/var/www/html/flaskapp')
+
+		      from flaskapp import app as application
+
+
+        Enable mod_wsgi.  in /etc/apache2/sites-enabled/000-default.conf
+	Place the code after the "DocumentRoot /var/www/html"  line
+
+	              * WSGIDaemonProcess flaskapp threads=5 
+				/OR/ 
+		WSGIDaemonProcess app processes=5 python-path=/usr/local/lib/python3.6/dist-packages  threads=1
+
+
+		WSGIScriptAlias / /var/www/html/flaskapp/flaskapp.wsgi
+
+		<Directory flaskapp>
+    		WSGIProcessGroup flaskapp
+    		WSGIApplicationGroup %{GLOBAL}
+    		Order deny,allow
+    		Allow from all
+		</Directory>
+
+
+
+
+Link ref- https://www.codementor.io/@jqn/deploy-a-flask-app-on-aws-ec2-13hp1ilqy2
+
+Other ref for help- https://flask.palletsprojects.com/en/1.1.x/quickstart/
+
+
+

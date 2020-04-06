@@ -16,7 +16,7 @@
 	....
     } 
    //Css rule to apply this animation
-	animation: keyframe_name  duration  delay  timining_fn  animation_fill_mode=backwards//scaling begans at 0%;
+	animation: keyframe_name  duration  delay  timining_fn  animation_fill_mode=backwards//scaling begans at 0%;      //Fill mode defines that the properties after animation should come back to the original state i.e "backwards" or it should remain in the state of animation completion "forwards" i.e all the properties that has changes till 100% keyframe will remain like that
 	animation-delay: 
 	
 
