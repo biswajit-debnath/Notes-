@@ -1,0 +1,45 @@
+Docker Commands--
+
+//////////////All the running containers////////////////////////////
+-> docker ps
+
+//////////////All the images present in the system/////////////
+-> docker images
+
+//////////////Run the docker image/////////////////////
+-> docker run   -p hostPort:DockerPort     -d      -it         image	//-d  run in bg     //-it interective terminal of the container
+
+//////////////Commit changes after making changes in the container using in use i.e in terminal during running 
+-> docker commit  image_id      new_image_name:version x
+
+
+/////////////Kill a running container////////////////////////////////
+-> docker kill image_id
+
+/////////////Delete a image from the system////////////////////
+-> docker image rm image_name
+
+//////////////Create a dockerfile to create the image//////////
+-> vim file_name
+
+//////////////To exit and save exit vim////////////////
+(only exit)-> Esc -> :q!
+(save&exit)-> Esc -> :wq
+
+
+
+/////////////////Docker fiile to image creation///////////////
+->docker build -t image_name  .         //. is the current dir for docker file
+
+
+///////////////vim Code//////////////////////////
+-> FROM  ubuntu:latest   //Base os or module
+-> RUN  ubuntu command    //Install ubuntu depencies
+
+->WORKDIR /app		//Create a working dir /app
+-> COPY .   /app		//Copy the content of current directory i.e . to the docker cotainer dir /app
+
+->ENTRYPOINT ["node"]	//Runs when conatiner starts
+->CMD ["server.js"]		//attributes to entrypoint
+
+   

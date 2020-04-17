@@ -70,6 +70,6 @@ app.run(host= '0.0.0.0',port=8080)
 
 To run the server as bg service
 npm install pm2@latest -g     //Install pm2 after installing node
-chmode x+ flaskapp.py	// Give execute access to the main flask file
+chmod +x flaskapp.py	// Give execute access to the main flask file
 
 pm2 start flaskapp.py --name flask-app --interpreter=python3   //start the bg service 
