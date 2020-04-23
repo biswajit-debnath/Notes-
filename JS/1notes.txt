@@ -102,3 +102,15 @@ eval(String_to_become_variableName)
 	let total = arr.reduce((acc,cur) => {
 	   acc+cur   //accumulator+ current elemnt
  });
+
+
+
+
+
+
+
+
+
+////////////////////////
+If object result is { object, object}
+-> obj.content                  //To show content inside
