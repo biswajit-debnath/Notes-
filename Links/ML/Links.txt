@@ -1,0 +1,2 @@
+1.Deep Learning for Detecting Objects in an Image on Mobile Devices using react native & expo
+	https://towardsdatascience.com/deep-learning-for-detecting-objects-in-an-image-on-mobile-devices-7d5b2e5621f9
