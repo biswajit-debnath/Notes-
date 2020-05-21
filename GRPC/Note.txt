@@ -1,0 +1,7 @@
+Link to basic example that i understood 
+  --https://github.com/hnasr/javascript_playground/tree/master/grpc-demo
+
+
+Required Modules
+	1. "grpc"
+	2. "@grpc/proto-loader"
