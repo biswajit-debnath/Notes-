@@ -1,0 +1,2 @@
+Basic implementation of mssz queue
+--> https://github.com/hnasr/javascript_playground/tree/master/rabbitmq
