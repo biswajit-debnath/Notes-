@@ -1,0 +1,108 @@
+1> Install Nginx
+    sudo apt update
+    sudo apt install nginx
+    
+2> Firewall Config(Not mandatory)
+    sudo ufw app list
+    sudo ufw allow 'Nginx HTTP'
+    sudo ufw status
+    
+3> Nginx status
+     sudo systemctl status nginx //To to Ip in browser
+     
+     
+4> Nginx Commands
+    sudo systemctl start/stop/restart/reload nginx
+    
+
+
+
+5> Server Block config
+    sudo mkdir -p /var/www/exampleDomain.com/html
+    sudo chmod -R 777 /var/www/example.com
+    nano /var/www/example.com/html/index.html
+    
+    
+   On server block for only http:
+        server {  
+            listen 80;
+            listen [::]:80;
+
+            root /var/www/example.com/html;
+            index index.html index.htm index.nginx-debian.html;
+
+            server_name example.com www.example.com;
+
+            location / {
+                    try_files $uri $uri/ =404;
+            }
+          }
+          
+          
+     On server block for https:
+          server {    
+            root /var/www/example.com/html;
+            index index.html index.htm index.nginx-debian.html;
+
+            server_name example.com www.example.com;
+
+            location / {
+                    try_files $uri $uri/ =404;
+            }
+            
+            //SSL connfigs that will be automatically filled by ssl provider
+          }
+          
+          server {
+              if ($host = exampleDomain.com) {
+                return 301 https://$host$request_uri;
+              }
+              server_name exampleDomain.com;
+              listen 80;
+              return 404;
+          }
+          
+          
+     
+    
+6> Create a link from site available to site enable 
+    sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
+  
+  
+7> To avoid a possible hash bucket memory problem that can arise from adding additional server names, it is necessary to adjust a single value in the /etc/nginx/nginx.conf file. Open the file:
+    sudo nano /etc/nginx/nginx.conf
+    server_names_hash_bucket_size 64; //uncomment
+    
+    
+8> Test for any error for nginx syntx
+    sudo nginx -t
+    sudo systemctl restart nginx
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ ///////Getting SSL with certbot lets encrypt////////////////////////////////////////////////
+ 
+   sudo add-apt-repository ppa:certbot/certbot
+
+   sudo apt install python-certbot-nginx or sudo apt install python3-certbot-nginx
+
+   reload nginx
+   
+   check for ufw given in first section
+   
+   sudo certbot --nginx -d exampleDomain.com -d www.exampleDomain.com
+
+   
+   //To test the renewal process, you can do a dry run with certbot:
+   
+        sudo certbot renew --dry-run
+   
+    
+    
