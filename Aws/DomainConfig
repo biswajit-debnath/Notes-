@@ -1,0 +1,4 @@
+1> In hosted zone select your domain then create a new record 
+      A record that will route the req to a ipv4 
+      
+2> Create another record for Cname record for www.domain.com that will point to domain.com
