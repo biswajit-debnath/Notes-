@@ -1,0 +1,5 @@
+1. Go to actions in repo select node js ci workflow
+2. Change yaml file check dms2.0 for that
+3. Go to setting then action then add runner then follow steps in the hosted server 
+4. sudo ./svc.sh install then run for running runner in background
+5. setup nginx to point to build folder
