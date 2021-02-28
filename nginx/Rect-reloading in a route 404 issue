@@ -1,0 +1,6 @@
+The location block in your nginx config should be:
+
+location / {
+  try_files $uri /index.html;
+}
+The problem is that requests to the index.html file work, but you're not currently telling nginx to forward other requests to the index.html file too.
