@@ -32,3 +32,6 @@
 
 ### Unstage any file for not commiting after adding
 `git HEAD <filename> `
+
+### Undo Last Git Commit with reset
+`$ git reset --soft HEAD~1`
