@@ -35,3 +35,7 @@
 
 ### Undo Last Git Commit with reset
 `$ git reset --soft HEAD~1`
+
+
+### Roll Back to a previous commit 
+`$ git reset --hard commit-id`
