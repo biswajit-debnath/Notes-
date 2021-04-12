@@ -1,5 +1,40 @@
 1. Go to actions in repo select node js ci workflow
-2. Change yaml file check dms2.0 for that
-3. Go to setting then action then add runner then follow steps in the hosted server 
-4. sudo ./svc.sh install then run for running runner in background
+2. Change yaml file check below for that
+3. Go to setting -> action -> add runner -> follow steps in the hosted server 
+4. To run the runner in background ->sudo ./svc.sh install -> sudo ./svc.sh start
+
+
 5. setup nginx to point to build folder
+
+
+
+
+---Yaml File----------------------------------------------------------------------------------
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    strategy:
+      matrix:
+        node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm i
+    - run: npm run build --if-present
+    - run: pm2 restart node-app
+    
+-------End Of File-------------------------------------------------------------------------------------    
