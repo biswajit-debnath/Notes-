@@ -9,6 +9,8 @@
 
 
 
+
+
 ---Yaml File----------------------------------------------------------------------------------
 
 name: Node.js CI
@@ -38,3 +40,9 @@ jobs:
     - run: pm2 restart node-app
     
 -------End Of File-------------------------------------------------------------------------------------    
+
+
+
+References -
+Youtube -> https://www.youtube.com/watch?v=X3F3El_yvFg&t=1068s
+Blog -> https://dev.to/chathula/how-to-set-up-a-ci-cd-pipeline-for-a-node-js-app-with-github-actions-32h0
