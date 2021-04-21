@@ -9,5 +9,8 @@
 `CREATE USER 'sammy'@'localhost' IDENTIFIED BY 'password'`;
 
 ### Grant  all previlages to the created user
-`GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;`
+`GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;`  
+`dfsd`
+
+
 
