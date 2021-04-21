@@ -46,3 +46,9 @@ jobs:
 References -
 Youtube -> https://www.youtube.com/watch?v=X3F3El_yvFg&t=1068s
 Blog -> https://dev.to/chathula/how-to-set-up-a-ci-cd-pipeline-for-a-node-js-app-with-github-actions-32h0
+
+
+### To remove runner from system
+1.  sudo ./svc.sh stop
+2.  sudo ./svc.sh uninstall
+3. ./config.sh remove --token Token-given-by-github
