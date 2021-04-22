@@ -9,15 +9,14 @@
 `CREATE USER 'sammy'@'localhost' IDENTIFIED BY 'password'`;
 
 ### Grant  all previlages to the created user
-`GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;`
-### Grant previlages on a db to the created user
-`GRANT ALL PRIVILEGES ON 'database'.* TO 'sammy'@'localhost';`
+`GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;`  
 
-### Other sql commands
-`Create Database DatabaseName`  
-`Show Databases`  
-`Use DatabaseName`  
-`Show Tables`  
+### Grant  previlages on a db to the created user
+`GRANT ALL PRIVILEGES ON 'database'.* TO 'sammy'@'localhost';`  
 
-
+### Delete sql-server completely with all data
+`sudo systemctl stop mysql`   
+`sudo apt-get remove --purge mysql*`   
+`sudo apt-get autoremove`   
+`sudo apt-get autoclean`   
 
