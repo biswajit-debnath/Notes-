@@ -1,0 +1,5 @@
+1. Create a instance
+2. To connect it through ubuntu
+        -> install mysql-server
+        -> sudo systemctl stop mysql -- after that check status by systemctl status mysql
+        -> mysql -h your-rds-endpoint.rds.amazonaws.com -P 3306 -u username -p    
