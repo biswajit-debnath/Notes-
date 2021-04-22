@@ -10,4 +10,14 @@
 
 ### Grant  all previlages to the created user
 `GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;`
+### Grant previlages on a db to the created user
+`GRANT ALL PRIVILEGES ON 'database'.* TO 'sammy'@'localhost';`
+
+### Other sql commands
+`Create Database DatabaseName`  
+`Show Databases`  
+`Use DatabaseName`  
+`Show Tables`  
+
+
 
