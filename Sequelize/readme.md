@@ -1,3 +1,7 @@
+### Links
+<a href="drive.google.com/drive/folders/1rMd9ZWjj2rinmDYtuYaLwP4YMeLBZhgG">General</a>
+
+
 ### Installing dependecies
 `sequelize mysql 2` //local dependencies
 `sequelize-cli` //global dependencies
