@@ -54,6 +54,11 @@ SELECT name, COUNT(*) FROM countries
 GROUP BY name;     //Used to to arrange identical data into groups like in this command it will combine all the same country and return the count with id
 ```
 
+### Arithmatic expression in sql
+```
+Select amount,(amount * 0.01) as 'TenPercentOfAmount' from payments 
+```
+
 
 ### Some new operator
 * **AVG()**    *//It returns the average value for a numerical column*     
