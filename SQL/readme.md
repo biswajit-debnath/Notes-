@@ -48,6 +48,13 @@ Select * from countries where name like '_ _P%';    //Will return all countries 
 Select * from countries where name ilike 'P%';    //Will return all countries whose starting character is P or p it is case incencitive for ILike command  
 ```
 
+### Group By command
+```
+SELECT name, COUNT(*) FROM countries
+GROUP BY name;     //Used to to arrange identical data into groups like in this command it will combine all the same country and return the count with id
+```
+
+
 ### Some new operator
 * **AVG()**    *//It returns the average value for a numerical column*     
 `SELECT AVG(amount) from payments`  
