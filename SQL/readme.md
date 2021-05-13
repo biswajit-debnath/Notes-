@@ -2,7 +2,7 @@
 <a href="https://www.mockaroo.com/">Mockaroo</a>
 
 ### Install my sql server
-`sudo apt update`
+```sudo apt update```
 `sudo apt install mysql-server`
 
 ### Get inside sql
