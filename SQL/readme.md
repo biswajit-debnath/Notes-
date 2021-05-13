@@ -41,6 +41,12 @@ Select * from countries where name In ('India','Usa','Franch');
 Select * from countries where name In (Subquery which returns a single column of country name);
 ```
 
+### Like and ILike command
+```
+Select * from countries where name like 'P%';    //Will return all countries whose starting character is uppercase P   
+Select * from countries where name like '_ _P%';    //Will return all countries whose starting 2 character is anything then leading with a  uppercase P      
+Select * from countries where name ilike 'P%';    //Will return all countries whose starting character is P or p it is case incencitive for ILike command  
+```
 
 ### Some new operator
 * **AVG()**    *//It returns the average value for a numerical column*     
@@ -60,5 +66,5 @@ Select * from countries where name In (Subquery which returns a single column of
 
 
 ### Techniques
-* Count(*)  `It is used to count the number of column in the table`   
+* **Count(*)**  *//It is used to count the number of column in the table*   
 `Select Count(*) from table_name;`   
