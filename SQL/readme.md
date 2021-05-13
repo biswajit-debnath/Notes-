@@ -46,10 +46,10 @@ Select * from countries where name In (Subquery which returns a single column of
 * AVG()  >It returns the average value for a numerical column     
 `SELECT AVG(amount) from payments`  
    
-* BETWEEN  _It is used to filter the result set within a certain range, values can be num,text or dates   
+* BETWEEN  _It is used to filter the result set within a certain range, values can be num,text or dates_   
 `SELECT amount from payments WHERE amount BETWEEN 6000 and 8000`   
    
-* COUNT()   *Returns the number of rows in the selected column where the column is not null  
+* COUNT()   *Returns the number of rows in the selected column where the column is not null*   
 `Select COUNT(id) from payments`   
    
 * ALTER TABLE  `It adds columns to a table in a database`   
