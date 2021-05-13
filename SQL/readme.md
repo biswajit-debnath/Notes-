@@ -1,6 +1,7 @@
 ### To generate mock data for database
 <a href="https://www.mockaroo.com/">Mockaroo</a>
 
+
 ### Install my sql server
 ```
 sudo apt update
@@ -76,7 +77,30 @@ Select amount,(amount * 0.01) as 'TenPercentOfAmount' from payments
 * **Delete**   *//Are used to remove rows from a table*   
 `DELETE FROM table_name WHERE some_column = some_value;`   
 
+* **upper(Column)**   *//It converts every value of the column to uppercase*   
+`Select upper(FIRST_NAME) from Worker;`   
+
+* **substring(Column,1,3)**   *//It return the substring of the value first para is staring string and sencond is ending character*   
+`Select substring(FIRST_NAME,1,3) from Worker;`   
+
+* **length(Column)**   *//It return the length of the string for every value in the column*   
+`Select distinct length(DEPARTMENT) from Worker;`   
+
+
+* **concat(Column1,Column2)**   *//It return the joined string for column1 and column2 for every value*   
+`Select CONCAT(FIRST_NAME, ' ', LAST_NAME) AS 'COMPLETE_NAME' from Worker;`   
+
 
 ### Techniques
 * **Count(*)**  *//It is used to count the number of column in the table*   
 `Select Count(*) from table_name;`   
+
+
+
+
+
+## Tutorials
+<a href="https://www.youtube.com/watch?v=qw--VYLpxG4&t=1s">Youtube 4hr crash course</a>
+
+## Practice Questions
+<a href="https://www.techbeamers.com/sql-query-questions-answers-for-practice/" >Interview Questions and solution with demo data script</a>    
