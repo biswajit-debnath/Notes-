@@ -37,7 +37,7 @@
 
 
 ### Some new operator
-* AVG()  **It returns the average value for a numerical column     
+* AVG()  ** It returns the average value for a numerical column     
 `SELECT AVG(amount) from payments`  
    
 * BETWEEN  `It is used to filter the result set within a certain range, values can be num,text or dates`   
