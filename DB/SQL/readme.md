@@ -88,7 +88,7 @@ Select amount,(amount * 0.01) as 'TenPercentOfAmount' from payments
 
 
 * **string_agg(Column::varchar,',')**   *//string aggregator can be found in aggregator funtion in postgres doc, it joins every value of the column in a row with the seperstor mentioned in second parameter*   
-`Select distinct length(DEPARTMENT) from Worker;`   
+`Select string_agg(Column::varchar,',') from Worker;`   
 
 
 
