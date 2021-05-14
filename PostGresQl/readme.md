@@ -4,6 +4,7 @@
 ### Basic commands
 **sudo su - postgres**:   
 >Used to enter to db server   
+
 **\c dbname username**:    
 >Switch connection to a new database as user username
 
