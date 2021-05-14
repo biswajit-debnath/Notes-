@@ -87,6 +87,11 @@ Select amount,(amount * 0.01) as 'TenPercentOfAmount' from payments
 `Select distinct length(DEPARTMENT) from Worker;`   
 
 
+* **string_agg(Column::varchar,',')**   *//string aggregator can be found in aggregator funtion in postgres doc, it joins every value of the column in a row with the seperstor mentioned in second parameter*   
+`Select distinct length(DEPARTMENT) from Worker;`   
+
+
+
 * **concat(Column1,Column2)**   *//It return the joined string for column1 and column2 for every value*   
 `Select CONCAT(FIRST_NAME, ' ', LAST_NAME) AS 'COMPLETE_NAME' from Worker;`   
 
