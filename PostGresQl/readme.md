@@ -6,7 +6,24 @@
 >Used to enter to db server   
 
 **\c dbname username**:    
->Switch connection to a new database as user username
+>Switch connection to a new database as user username   
+
+**\l**:    
+>List available databases   
+
+**\dt**:    
+>List available tables   
+
+**\d table_name**:    
+>Describe a table   
+
+**\q**:    
+>Quit psql
+
+**Link**
+<a href="https://www.postgresqltutorial.com/psql-commands/">All commands</a>
+
+
 
 
 ### Steps to Connect to postgres db in a remote ubuntu server
