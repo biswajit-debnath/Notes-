@@ -1,5 +1,6 @@
 ### Links
 <a href="https://www.tecmint.com/install-postgresql-and-pgadmin-in-ubuntu/">Install and connect pgql with pgadmin</a>      
+<a href="https://node-postgres.com/features/queries">For queries and connection</a> 
 
 ### Basic commands
 **sudo su - postgres**:   
